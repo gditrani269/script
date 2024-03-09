@@ -4,9 +4,9 @@
 #el proceso busca las diferencias entre las dos carpeta y subcarpetas, y nivelala segunda carpeta a la primera para que la app tome los cambios.
 
 echo change
-sRootSource="/home/desa/react/mi-form/src"
-sRootApp="/home/desa/apps/mi-form/src"
-iLenghtRootSource=${#sRootSource}
+sRootSource="/home/desa/react/4-invoice-app/src"
+sRootApp="/home/desa/apps/4-invoice-app/src"
+iLenghtRootSource=${#sRootSource} 
 diff -qr $sRootSource $sRootApp > resumen.txt
 cat resumen.txt
 echo "--------------------------------------------"
@@ -28,7 +28,7 @@ do
 #           echo sFileSource: $sFileSource
             sFolderApp=$sRootApp$sFolderApp
 #           echo sFolderApp: $sFolderApp
-            cp -r $sFileSource $sFolderApp
+            cp $sFileSource $sFolderApp
         else
             echo no se hace nada ya que el cambio es de la carpeta aplicacion
         fi
